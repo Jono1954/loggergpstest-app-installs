@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="theme-color" content="#0a1628">
+<title>Download Logger GPS Test for Android</title>
+<style>
+  :root {
+    --bg: #0a1628;
+    --card: #12233d;
+    --card-border: #1e3a5f;
+    --text: #f4f7fb;
+    --muted: #9bb0c9;
+    --green: #16a34a;
+    --green-hover: #15803d;
+    --badge: #1d4ed8;
+    --close: #0D47A1;
+    --close-hover: #0a3a82;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background:
+      radial-gradient(1200px 500px at 50% -80px, #16345c 0%, transparent 70%),
+      var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 2rem 1.1rem 2.5rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 1.6rem 1.35rem 1.4rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.1rem;
+  }
+  .shield {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+  }
+  h1 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  h2 {
+    font-size: 0.95rem;
+    margin: 0 0 0.45rem;
+    color: var(--text);
+  }
+  ol {
+    margin: 0 0 1.35rem;
+    padding-left: 1.2rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  ol li { margin: 0.35rem 0; }
+  ol b { color: var(--text); }
+  .download {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: var(--green);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 14px;
+    padding: 0.95rem 1rem;
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.28);
+    border: none;
+    cursor: pointer;
+  }
+  .download:hover, .download:focus {
+    background: var(--green-hover);
+  }
+  .after-download {
+    text-align: center;
+  }
+  .badge {
+    display: inline-block;
+    margin: 0.9rem 0 0.35rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background: var(--badge);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .hint {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin: 0 0 0.85rem;
+  }
+  .hint b { color: var(--text); }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0;
+  }
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1.1rem;
+    gap: 0.75rem;
+  }
+  .close-btn {
+    background: var(--close);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(13, 71, 161, 0.35);
+  }
+  .close-btn:hover, .close-btn:focus {
+    background: var(--close-hover);
+  }
+  .close-fail {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin: 0.55rem 0 0;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="brand">
+        <svg class="shield" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#1d4ed8"
+            d="M24 4l16 6v12c0 10.5-6.6 20.2-16 24-9.4-3.8-16-13.5-16-24V10l16-6z"/>
+          <path fill="#93c5fd"
+            d="M24 10.5l-9 3.4v8.1c0 6.8 4.2 13.1 9 15.6 4.8-2.5 9-8.8 9-15.6v-8.1l-9-3.4z"/>
+        </svg>
+        <h1>Logger GPS Test — Bluetooth / NMEA check</h1>
+      </div>
+      <h2>Installation</h2>
+      <p class="hint"><b>New phone (not installed):</b>
+        Select Download. When the file finishes, tap it and choose Install.</p>
+      <p class="hint"><b>Already installed:</b>
+        Do not uninstall. Select Download and install over the existing app
+        so updates keep working.</p>
+      <ol>
+        <li>Select <b>Download Logger GPS Test</b>.</li>
+        <li>If the browser warns the file might be harmful, select
+          <b>Download anyway</b>.</li>
+        <li>When the download finishes, select the file and tap
+          <b>Install</b> or <b>Update</b>.</li>
+      </ol>
+      <a class="download" id="download-apk"
+        href="ABOUT:BLANK">
+        Download Logger GPS Test
+      </a>
+      <p class="meta" id="download-hint" hidden>Download started…</p>
+      <div class="after-download">
+        <div class="badge">Version <!--VERSION-->pending<!--/VERSION--></div>
+        <p class="meta">Approximately <!--SIZE_MB-->—<!--/SIZE_MB-->MB</p>
+      </div>
+      <div class="footer-row">
+        <button type="button" class="close-btn" id="close-page">Close</button>
+      </div>
+      <p class="close-fail" id="close-fail" hidden>
+        This tab could not be closed automatically — use the browser X
+        / Recents to close it.
+      </p>
+    </section>
+  </main>
+
+  <script>
+(function () {
+  var link = document.getElementById('download-apk');
+  var hint = document.getElementById('download-hint');
+  var closeBtn = document.getElementById('close-page');
+  var closeFail = document.getElementById('close-fail');
+  if (!link) return;
+
+  function showCloseFail() {
+    if (closeFail) closeFail.hidden = false;
+  }
+  function tryCloseTab() {
+    try { window.close(); } catch (e) { /* ignore */ }
+    setTimeout(function () {
+      if (!window.closed) showCloseFail();
+    }, 400);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () { tryCloseTab(); });
+  }
+
+  link.addEventListener('click', function (event) {
+    var apkUrl = link.getAttribute('href');
+    if (!apkUrl || apkUrl === 'ABOUT:BLANK') return;
+    event.preventDefault();
+    if (closeFail) closeFail.hidden = true;
+
+    var download = document.createElement('a');
+    download.href = apkUrl;
+    download.rel = 'noopener';
+    document.body.appendChild(download);
+    download.click();
+    download.remove();
+
+    if (hint) {
+      hint.hidden = false;
+      hint.textContent = 'Download started — you can close this tab.';
+    }
+  });
+})();
+  </script>
+</body>
+</html>
